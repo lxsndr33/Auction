@@ -1,0 +1,43 @@
+﻿@using Client
+
+@model LotsListViewModel
+
+@{
+    ViewBag.Title = "Главная";
+}
+
+<div class="navigation">
+    @using (Html.BeginForm())
+    {
+        @Html.DropDownList("current_category", (IEnumerable<SelectListItem>)ViewBag.categories, "Все категории")
+        @Html.DropDownList("current_city", (IEnumerable<SelectListItem>)ViewBag.cities, "Все")
+        @Html.TextBoxFor(x => x.part_name)
+        <input type="submit" value="Найти" />
+    }
+</div>
+
+
+@foreach (var lot in Model.lots)
+{
+    Html.RenderPartial("LotDescription", lot);
+   @* using (Html.BeginForm("UpPrice", "Home", new { page = Model.PagingInfo.CurrentPage }, FormMethod.Post))
+    {
+    @Html.Hidden("lotID", lot.lotID)
+    @Html.Hidden("categoryID", Model.lotFilter.categoryID)
+    @Html.Hidden("cityID", Model.lotFilter.cityID)
+    @Html.Hidden("search", Model.lotFilter.search)
+    <input type="submit" value="UpPrice" />
+    }*@
+}
+
+@*<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new
+{
+    page = x,
+    categoryID = Model.lotFilter.categoryID,
+    cityID = Model.lotFilter.cityID,
+    search = Model.lotFilter.search,
+}))
+</div>*@
+
+
