@@ -1,0 +1,59 @@
+D:\RaFa_\roj\Auction\Server\bin\Debug\Server.dll
+D:\RaFa_\roj\Auction\Server\bin\Debug\Server.pdb
+D:\RaFa_\roj\Auction\Server\obj\Debug\Server.dll
+D:\RaFa_\roj\Auction\Server\obj\Debug\Server.pdb
+D:\RaFa_\roj\Auction\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+F:\Разработка\Auction\Server\bin\Debug\Database1.sdf
+F:\Разработка\Auction\Server\bin\Debug\Server.dll.config
+F:\Разработка\Auction\Server\bin\Debug\Server.dll
+F:\Разработка\Auction\Server\bin\Debug\Server.pdb
+F:\Разработка\Auction\Server\bin\Debug\MySql.Data.DLL
+F:\Разработка\Auction\Server\bin\Debug\MySql.Data.Entity.EF5.dll
+F:\Разработка\Auction\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+F:\Разработка\Auction\Server\obj\Debug\Server.dll
+F:\Разработка\Auction\Server\obj\Debug\Server.pdb
+F:\Разработка\Auction (оригинал)\Server\bin\Debug\Server.dll.config
+F:\Разработка\Auction (оригинал)\Server\bin\Debug\Server.dll
+F:\Разработка\Auction (оригинал)\Server\bin\Debug\Server.pdb
+F:\Разработка\Auction (оригинал)\Server\bin\Debug\MySql.Data.Entity.EF5.dll
+F:\Разработка\Auction (оригинал)\Server\obj\Debug\Server.dll
+F:\Разработка\Auction (оригинал)\Server\obj\Debug\Server.pdb
+F:\Разработка\Auction (оригинал)\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\WORK.GIT\.git\Auction\Server\bin\Debug\Server.dll.config
+D:\WORK.GIT\.git\Auction\Server\bin\Debug\Server.dll
+D:\WORK.GIT\.git\Auction\Server\bin\Debug\Server.pdb
+D:\WORK.GIT\.git\Auction\Server\obj\Debug\Server.dll
+D:\WORK.GIT\.git\Auction\Server\obj\Debug\Server.pdb
+C:\Auction\Server\bin\Debug\Server.dll.config
+C:\Auction\Server\bin\Debug\Server.dll
+C:\Auction\Server\bin\Debug\Server.pdb
+C:\Auction\Server\obj\Debug\Server.dll
+C:\Auction\Server\obj\Debug\Server.pdb
+D:\RaFa_\Auction\Auction\Server\bin\Debug\Server.dll.config
+D:\RaFa_\Auction\Auction\Server\bin\Debug\Server.dll
+D:\RaFa_\Auction\Auction\Server\bin\Debug\Server.pdb
+D:\RaFa_\Auction\Auction\Server\bin\Debug\EntityFramework.dll
+D:\RaFa_\Auction\Auction\Server\bin\Debug\EntityFramework.SqlServer.dll
+D:\RaFa_\Auction\Auction\Server\bin\Debug\EntityFramework.xml
+D:\RaFa_\Auction\Auction\Server\bin\Debug\EntityFramework.SqlServer.xml
+D:\RaFa_\Auction\Auction\Server\obj\Debug\Server.dll
+D:\RaFa_\Auction\Auction\Server\obj\Debug\Server.pdb
+C:\Auction\Server\bin\Debug\EntityFramework.dll
+C:\Auction\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Auction\Server\bin\Debug\EntityFramework.xml
+C:\Auction\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Auction\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\WORK.GIT\.git\Auction\Server\bin\Debug\EntityFramework.dll
+D:\WORK.GIT\.git\Auction\Server\bin\Debug\EntityFramework.SqlServer.dll
+D:\WORK.GIT\.git\Auction\Server\bin\Debug\EntityFramework.xml
+D:\WORK.GIT\.git\Auction\Server\bin\Debug\EntityFramework.SqlServer.xml
+D:\roj\Auction\Server\obj\Debug\Server.dll
+D:\roj\Auction\Server\obj\Debug\Server.pdb
+D:\roj\Auction\Server\bin\Debug\Server.dll.config
+D:\roj\Auction\Server\bin\Debug\Server.dll
+D:\roj\Auction\Server\bin\Debug\Server.pdb
+D:\roj\Auction\Server\bin\Debug\EntityFramework.dll
+D:\roj\Auction\Server\bin\Debug\EntityFramework.SqlServer.dll
+D:\roj\Auction\Server\bin\Debug\EntityFramework.xml
+D:\roj\Auction\Server\bin\Debug\EntityFramework.SqlServer.xml
+D:\RaFa_\Auction\Auction\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache

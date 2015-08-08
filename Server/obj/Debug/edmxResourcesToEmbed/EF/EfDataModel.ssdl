@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище DB_9CF254_auctionsModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "DB_9CF254_auctions.dbo.category" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="categoryID" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="categoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "DB_9CF254_auctions.dbo.city" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="city">
+    <Key>
+      <PropertyRef Name="cityID" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="cityID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lot">
+    <Key>
+      <PropertyRef Name="lotID" />
+    </Key>
+    <Property Name="lotID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="currentPrice" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+    <Property Name="step" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+    <Property Name="blic" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="cityID" Type="int" Nullable="false" />
+    <Property Name="categoryID" Type="int" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="statusID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "DB_9CF254_auctions.dbo.lot_image" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="lot_image">
+    <Key>
+      <PropertyRef Name="imageID" />
+      <PropertyRef Name="path" />
+    </Key>
+    <Property Name="imageID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="lotID" Type="decimal" Precision="13" Scale="0" />
+    <Property Name="path" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "DB_9CF254_auctions.dbo.role" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="roleID" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="roleID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "DB_9CF254_auctions.dbo.t_status" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="t_status">
+    <Key>
+      <PropertyRef Name="statusID" />
+      <PropertyRef Name="status" />
+    </Key>
+    <Property Name="statusID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "DB_9CF254_auctions.dbo.t_user" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="t_user">
+    <Key>
+      <PropertyRef Name="userID" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Name="userID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="250" />
+    <Property Name="mail" Type="nvarchar" MaxLength="250" />
+    <Property Name="roleID" Type="int" Nullable="false" />
+    <Property Name="vk_userID" Type="int" />
+    <Property Name="change_on" Type="date" />
+  </EntityType>
+  <EntityContainer Name="Хранилище DB_9CF254_auctionsModelContainer">
+    <EntitySet Name="lot" EntityType="Self.lot" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="category" EntityType="Self.category" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [category].[categoryID] AS [categoryID], 
+    [category].[name] AS [name]
+    FROM [dbo].[category] AS [category]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="city" EntityType="Self.city" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [city].[cityID] AS [cityID], 
+    [city].[name] AS [name]
+    FROM [dbo].[city] AS [city]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="lot_image" EntityType="Self.lot_image" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [lot_image].[imageID] AS [imageID], 
+    [lot_image].[lotID] AS [lotID], 
+    [lot_image].[path] AS [path]
+    FROM [dbo].[lot_image] AS [lot_image]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="role" EntityType="Self.role" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [role].[roleID] AS [roleID], 
+    [role].[name] AS [name]
+    FROM [dbo].[role] AS [role]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="t_status" EntityType="Self.t_status" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [t_status].[statusID] AS [statusID], 
+    [t_status].[status] AS [status]
+    FROM [dbo].[t_status] AS [t_status]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="t_user" EntityType="Self.t_user" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [t_user].[userID] AS [userID], 
+    [t_user].[name] AS [name], 
+    [t_user].[password] AS [password], 
+    [t_user].[mail] AS [mail], 
+    [t_user].[roleID] AS [roleID], 
+    [t_user].[vk_userID] AS [vk_userID], 
+    [t_user].[change_on] AS [change_on]
+    FROM [dbo].[t_user] AS [t_user]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

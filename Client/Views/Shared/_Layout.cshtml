@@ -3,41 +3,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>@ViewBag.Title</title>
-  <link href="~/Content/Site.css" type="text/css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-  <div id="header">
-    <div class="title">Аукцион  
-        <div class="menu">
-            @Html.ActionLink("Выставить лот", "Checkout", "Checkout")
-            @if ((Session["login"] as LoginModel) != null && (Session["login"] as LoginModel).RoleID == 1)
-            { 
+    <div class="header">
+        <div class="title">Аукцион</div>
+        <div class="checkout-login">
+            <div class="menu">
+                @Html.ActionLink("Выставить лот", "Checkout", "Checkout")
                 @Html.ActionLink("Админка", "GetAdmin", "Admin")
-            }
-        </div> 
-        <div class="login">
-            @if ((Session["login"] as LoginModel) != null)
-            {    
-                <li>@((Session["login"] as LoginModel).Name)</li>
-                <li>@((Session["login"] as LoginModel).Email)</li>
-                <li>@Html.ActionLink("Выход", "Logout", "Login")</li>
-            }
-            else
-            {
-                <li>@Html.ActionLink("Вход", "Index", "Login")</li>
-                <li>@Html.ActionLink("Регистрация", "Index", "User")</li>
-            }
+                @*@if ((Session["login"] as LoginModel) != null && (Session["login"] as LoginModel).RoleID == 1)
+                    {
+
+                    }*@
+            </div>
+            <div class="login">
+                @if ((Session["login"] as LoginModel) != null)
+                {
+                    <div>@((Session["login"] as LoginModel).Name)</div>
+                    <div>@((Session["login"] as LoginModel).Email)</div>
+                    <div>@Html.ActionLink("Выход", "Logout", "Login")</div>
+                }
+                else
+                {
+                    <div>@Html.ActionLink("Вход", "Index", "Login")</div>
+                    <div>@Html.ActionLink("Регистрация", "Index", "User")</div>
+                }
+            </div>
         </div>
+
     </div>
-  </div>
-  <div id="categories">
-    БлаБлаБлO
-  </div>
-  <div id="content">
-    @RenderBody()
-  </div>
+    <div id="categories">
+        БлаБлаБлO
+    </div>
+    <div id="content">
+        @RenderBody()
+    </div>
 </body>
 </html>

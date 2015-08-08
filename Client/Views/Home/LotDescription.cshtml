@@ -1,16 +1,26 @@
 ﻿@model Server.EF.lot
 
 <div class="lot">
-    <img alt="@Model.name" style="width:300px;height:200px;" src="@Model.image" />
-    <div class="name">Название: @Model.name</div>
-    <div class="step"> Шаг: @Model.step.ToString()</div>
-    <div class="description"> Описание: @Model.description</div>
-    <div class="description"> Текущая цена: @Model.currentPrice.ToString()</div>
+    <img class="lotImage" alt="@Model.name" src="@Model.name" />
+    <div class="lotInformation">
+        <div class="name">@Model.name</div>
+        <div class="partialDescription">
+            <div class="priceAndRatesCount">
+                <div class="currentPrice">@Model.currentPrice.ToString() руб.</div>
+                <div class="ratesCount">Количество ставок</div>
+            </div>
+            <div class="timeAndLocation">
+                <div class="time">@Model.date.ToString("dd.MM.yyyy")</div>
+                <div class="location">Город: @Model.cityID.ToString()</div>
+            </div>
+        </div>
+    </div>
 </div>
 
-@*<div class="item">
-  <h3>@Model.name</h3>
-  @Model.step
-  @Model.description
-  <h4>@Model.currentPrice.ToString("c")</h4>
-</div>*@
+@* <div class="item">
+      <h3>@Model.name</h3>
+      @Model.step
+      @Model.description
+      <h4>@Model.currentPrice.ToString("c")</h4>
+    </div>
+*@
